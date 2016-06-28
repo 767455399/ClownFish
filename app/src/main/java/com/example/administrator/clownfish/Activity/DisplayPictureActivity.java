@@ -38,7 +38,6 @@ public class DisplayPictureActivity extends BaseActivity {
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
             float x = e2.getX() - e1.getX();
             float y = e2.getY() - e1.getY();
-
             if (x > 0) {
                 doResult(RIGHT);
             } else if (x < 0) {
@@ -61,7 +60,8 @@ public class DisplayPictureActivity extends BaseActivity {
                     i--;
                     loadImage(i);
                 }else{
-                    loadImage(images.length-1);
+                   i=Integer.valueOf(images.length-1);
+                    loadImage(i);
                 }
                 break;
             case LEFT:
