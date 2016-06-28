@@ -6,11 +6,8 @@ import android.view.MotionEvent;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.example.administrator.clownfish.R;
 import com.squareup.picasso.Picasso;
-
-
 public class DisplayPictureActivity extends BaseActivity {
     private TextView textView;
     private GestureDetector gestureDetector;
@@ -66,7 +63,6 @@ public class DisplayPictureActivity extends BaseActivity {
                 }else{
                     loadImage(images.length-1);
                 }
-                Toast.makeText(DisplayPictureActivity.this, "go left", Toast.LENGTH_LONG).show();
                 break;
             case LEFT:
                 if(i<images.length-1){
