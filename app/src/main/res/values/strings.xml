@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ClownFish</string>
+    <string name="home_page">首页</string>
+    <string name="hi_tao">嗨淘</string>
+    <string name="wallet">钱包</string>
+    <string name="mine">我</string>
+    <string name="qr_code">我</string>
+    <string name="yesterday">昨天</string>
+    <string name="today">今天</string>
+    <string name="tomorrow">明天</string>
+    <string name="bank_card">银行卡</string>
+
+</resources>

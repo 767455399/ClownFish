@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+ <!--  <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">-->
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="@dimen/activity_horizontal_margin"
+           android:layout_marginTop="@dimen/activity_horizontal_margin"
+           android:text="账户余额（元）"/>
+
+
+       <TextView
+           android:id="@+id/balanceTextView"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="0.00"
+           android:textSize="50sp"
+           android:gravity="center"/>
+
+       <TextView
+           android:text="账户余额为小泰乐活和口袋钱包公用余额，不包括借款可用额度"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center"/>
+
+       <ImageView
+           android:layout_marginLeft="@dimen/activity_horizontal_margin"
+           android:layout_marginRight="@dimen/activity_horizontal_margin"
+           android:background="@color/common_background_color"
+           android:layout_width="match_parent"
+           android:layout_height="1px" />
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="20dp"
+           android:layout_marginBottom="20dp"
+           android:gravity="center"
+           android:orientation="horizontal">
+
+           <Button
+               android:text="提现"
+               android:layout_width="120dp"
+               android:layout_height="50dp"
+               android:gravity="center"
+               android:layout_marginRight="20dp"/>
+
+           <Button
+               android:text="提现"
+               android:gravity="center"
+               android:layout_width="120dp"
+               android:layout_height="50dp"
+               android:layout_marginLeft="20dp"/>
+
+
+
+       </LinearLayout>
+
+<include layout="@layout/item_mine_grid"/>
+
+       <TextView
+           android:layout_marginLeft="@dimen/activity_horizontal_margin"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="便民服务"/>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="0.5dp"
+          android:background="#E5E5E5"/>
+
+       <com.example.administrator.clownfish.view.AllShowedGridView
+           android:id="@+id/convenience_services"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           app:column="4"
+           app:fixEmpty="true" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="便民服务"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#E5E5E5"/>
+
+        <com.example.administrator.clownfish.view.AllShowedGridView
+            android:id="@+id/life_services"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:column="4"
+            app:fixEmpty="true" />
+
+
+   </LinearLayout>
+   <!-- </LinearLayout>-->
+</ScrollView>

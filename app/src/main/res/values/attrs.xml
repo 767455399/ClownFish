@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FixRatioFrameLayout">
+        <attr name="ratio" format="float" />
+        <attr name="baseOnWidth" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="PagerIndicator">
+
+        <attr name="radius" format="dimension" />
+        <attr name="fillColor" format="color" />
+        <attr name="strokeColor" format="color" />
+        <attr name="shape" format="string" />
+
+    </declare-styleable>
+
+    <declare-styleable name="AllShowedGridView">
+        <attr name="column" format="integer" />
+        <attr name="fixEmpty" format="boolean" />
+    </declare-styleable>
+
+
+</resources>

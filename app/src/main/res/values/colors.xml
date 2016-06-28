@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="splash_bg">#21CBF5</color>
+
+
+    <color name="loading_color_1">#FE8C1D</color>
+    <color name="loading_color_2">#37BC9B</color>
+    <color name="loading_color_3">#3BB7E9</color>
+    <color name="loading_color_4">#FD6018</color>
+    <color name="loading_color_5">#FF6766</color>
+
+
+
+    <color name="toolbar_icon_color">#22CBF7</color>
+    <color name="toolbar_title_color">#1B1B1B</color>
+    <color name="color_control_highlight">#1A000000</color>
+
+    <color name="common_text_color">#333333</color>
+    <color name="common_secondary_text_color">#6C6C6C</color>
+    <color name="common_edit_text_color">#1B1B1B</color>
+    <color name="common_edit_hint_color">#B4B4B4</color>
+    <color name="common_background_color">#EEEEEE</color>
+
+    <color name="link_text_color">#1ABDE8</color>
+
+
+    <color name="text_tab_default">#A0A0A0</color>
+    <color name="text_tab_selected">#22CBF7</color>
+
+    <color name="blue_button_default">#1ABDE8</color>
+    <color name="blue_button_pressed">#259CBE</color>
+
+    <color name="green_button_default">#53D1C3</color>
+    <color name="green_button_pressed">#4CA69D</color>
+
+    <color name="holder_color">#2B2B2B</color>
+
+    <color name="dialog_bg">#99000000</color>
+
+    <color name="white_pressed">#dad9d9</color>
+
+    <color name="red">#ff3b30</color>
+    <color name="green">#00E676</color>
+    <color name="color_control_highlight_white">#66FFFFFF</color>
+    <color name="theme_color">#FF6766</color>
+    <color name="orange">#FF6C00</color>
+    <color name="deep_orange">#FF7C00</color>
+
+    <color name="cut_line">#E5E5E5</color>
+
+    <color name="color_indicator_default">#66FFFFFF</color>
+    <color name="color_indicator_selected">#FFFFFFFF</color>
+    <color name="tab_text_checked">#FF444444</color>
+    <color name="tab_text_default">#99444444</color>
+</resources>
