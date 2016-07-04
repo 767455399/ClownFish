@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.administrator.clownfish.Activity.DisplayPictureActivity;
+import com.example.administrator.clownfish.Activity.PhotoBrowseActivity;
 import com.example.administrator.clownfish.Activity.TextActivity;
 import com.example.administrator.clownfish.BaseFragment;
 import com.example.administrator.clownfish.R;
@@ -53,7 +54,6 @@ public class MineFragment extends BaseFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -107,12 +107,12 @@ public class MineFragment extends BaseFragment {
         convenience_services.setOnItemClickListener(new AllShowedGridView.OnItemClickListener() {
             @Override
             public void onClick(int position) {
-                Intent intent = new Intent();
+              /*  Intent intent = new Intent();
                 intent.setClass(getActivity(), TextActivity.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("key", convenienceServicesString[position]);
                 intent.putExtras(bundle);
-                startActivity(intent);
+                startActivity(intent);*/
 
             }
         });

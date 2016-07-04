@@ -16,6 +16,7 @@ public class DisplayPictureActivity extends BaseActivity {
     private ImageView imageView;
     String[] images;
     int i = 0;
+    int position=0;
 
     @Override
     protected void initView() {
@@ -23,9 +24,11 @@ public class DisplayPictureActivity extends BaseActivity {
         gestureDetector = new GestureDetector(DisplayPictureActivity.this, onGestureListener);
         Bundle b = this.getIntent().getExtras();
         images = b.getStringArray("image");
+        position=b.getInt("position");
+        i=position;
         imageView = (ImageView) findViewById(R.id.imageView);
         textView=(TextView)findViewById(R.id.textView);
-        loadImage(0);
+        loadImage(i);
     }
 
     @Override
