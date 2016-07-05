@@ -81,7 +81,7 @@ public class PhotoBrowseActivity extends Activity {
                 PhotoView p = new PhotoView(PhotoBrowseActivity.this);
                 p.setLayoutParams(new AbsListView.LayoutParams((int) (getResources().getDisplayMetrics().density * 100), (int) (getResources().getDisplayMetrics().density * 100)));
                 p.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                p.setImageResource(imgs[position]);
+             /*   p.setImageResource(imgs[position]);*/
                 // 把PhotoView当普通的控件把触摸功能关掉
                 p.disenable();
                 return p;
@@ -94,7 +94,7 @@ public class PhotoBrowseActivity extends Activity {
                 PhotoView p = (PhotoView) view;
                 mInfo = p.getInfo();
 
-                mPhotoView.setImageResource(imgs[position]);
+              /*  mPhotoView.setImageResource(imgs[position]);*/
                 mBg.startAnimation(in);
                 mBg.setVisibility(View.VISIBLE);
                 mParent.setVisibility(View.VISIBLE);;

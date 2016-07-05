@@ -10,11 +10,12 @@ import android.widget.TextView;
 import com.example.administrator.clownfish.BaseActivity;
 import com.example.administrator.clownfish.R;
 import com.example.administrator.clownfish.view.Gouzhaohanshu;
+import com.example.administrator.clownfish.view.PhotoView;
 import com.squareup.picasso.Picasso;
 
 public class ImageViewActivity extends BaseActivity {
     private String imagepath;
-    private ImageView imageView;
+    private PhotoView imageView;
     private TextView textView;
     public static String zhanmusi="詹姆斯";
 
@@ -24,7 +25,8 @@ public class ImageViewActivity extends BaseActivity {
     protected void initView() {
         setContentView(R.layout.activity_image_view);
         textView=(TextView)findViewById(R.id.textView);
-        imageView=(ImageView)findViewById(R.id.imageView);
+        imageView=(PhotoView) findViewById(R.id.imageView);
+        imageView.enable();
         final Intent intent = this.getIntent();        //获取已有的intent对象
         Bundle bundle = intent.getExtras();    //获取intent里面的bundle对象
         imagepath = bundle.getString("imagePath");    //获取Bundle里面的字符串

@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.administrator.clownfish.Activity.DisplayPictureActivity;
+import com.example.administrator.clownfish.Activity.ImageViewActivity;
 import com.example.administrator.clownfish.Activity.PhotoBrowseActivity;
 import com.example.administrator.clownfish.Activity.TextActivity;
 import com.example.administrator.clownfish.BaseFragment;
@@ -76,9 +77,14 @@ public class MineFragment extends BaseFragment {
             @Override
             public void onClick(int position) {
                 Intent intent = new Intent();
-                intent.setClass(getActivity(), DisplayPictureActivity.class);
+               /* intent.setClass(getActivity(), DisplayPictureActivity.class);
                 Bundle bundle=new Bundle();
                 bundle.putStringArray("image", lifeImageViewPath);
+                intent.putExtras(bundle);
+                startActivity(intent);*/
+                intent.setClass(getActivity(), ImageViewActivity.class);
+                Bundle bundle=new Bundle();
+                bundle.putString("imagePath",lifeImageViewPath[position]);
                 intent.putExtras(bundle);
                 startActivity(intent);
             }

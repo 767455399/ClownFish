@@ -56,7 +56,8 @@
         <activity android:name=".Activity.TextActivityA" />
         <activity android:name=".Activity.JiChengActivity" />
         <activity android:name=".Activity.DisplayPictureActivity" />
-        <activity android:name=".Activity.PhotoBrowseActivity"></activity>
+        <activity android:name=".Activity.PhotoBrowseActivity" />
+        <activity android:name=".Activity.ImageActivity"></activity>
     </application>
 
 </manifest>

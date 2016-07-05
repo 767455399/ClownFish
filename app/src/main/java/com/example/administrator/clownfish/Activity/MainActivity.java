@@ -45,8 +45,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     @Override
     protected void initView() {
         setContentView(R.layout.activity_main);
-        /*Intent intent=new Intent();
-        intent.setClass(MainActivity.this,TextActivityA.class);
+       /* Intent intent=new Intent();
+        intent.setClass(MainActivity.this,ImageActivity.class);
         startActivity(intent);*/
         Car car1=Car.getCar();
         car1.setCarColor(blue);
