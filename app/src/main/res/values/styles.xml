@@ -8,6 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Base.Dialog" parent="Theme.AppCompat.Light.Dialog" />
+
 <!--loadingdialog style-->
     <style name="LoadingDialogStyle" parent="Base.V7.Theme.AppCompat.Dialog">
         <item name="android:backgroundDimEnabled">false</item>

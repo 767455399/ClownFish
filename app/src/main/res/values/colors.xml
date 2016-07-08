@@ -25,12 +25,12 @@
     <color name="common_secondary_text_color">#6C6C6C</color>
     <color name="common_edit_text_color">#1B1B1B</color>
     <color name="common_edit_hint_color">#B4B4B4</color>
-    <color name="common_background_color">#EEEEEE</color>
+    <color name="common_background_color">#F4F4F4</color>
 
     <color name="link_text_color">#1ABDE8</color>
 
 
-    <color name="text_tab_default">#A0A0A0</color>
+    <color name="text_tab_default">#EFEFF4</color>
     <color name="text_tab_selected">#22CBF7</color>
 
     <color name="blue_button_default">#1ABDE8</color>

@@ -9,5 +9,6 @@
     <string name="today">今天</string>
     <string name="tomorrow">明天</string>
     <string name="bank_card">银行卡</string>
+    <string name="image_view_description">imageView</string>
 
 </resources>

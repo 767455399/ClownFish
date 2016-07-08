@@ -46,7 +46,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     protected void initView() {
         setContentView(R.layout.activity_main);
        /* Intent intent=new Intent();
-        intent.setClass(MainActivity.this,ImageActivity.class);
+        intent.setClass(MainActivity.this,ViewPagerActivty.class);
         startActivity(intent);*/
         Car car1=Car.getCar();
         car1.setCarColor(blue);
@@ -98,7 +98,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     @Override
     protected void onResume() {
         super.onResume();
-        setTabSelected(0);
+   /*     setTabSelected(0);*/
     }
 
     /* @Override
