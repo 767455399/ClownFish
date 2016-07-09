@@ -53,9 +53,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         Car car2=Car.getCar();
         car2.getCarColor();
 
-      /*  Fangfa.getMax(this);*/
-        Fangfa fangfa=new Fangfa();
-        fangfa.getMin(this);
+        Fangfa.getMax(this);
+      /*  Fangfa fangfa=new Fangfa();
+        fangfa.getMin(this);*/
         homePageLinearLayout = (LinearLayout) findViewById(R.id.homePageLinearLayout);
         haitaoLinearLayout = (LinearLayout) findViewById(R.id.haitaoLinearLayout);
         walletLinearLayout = (LinearLayout) findViewById(R.id.walletLinearLayout);

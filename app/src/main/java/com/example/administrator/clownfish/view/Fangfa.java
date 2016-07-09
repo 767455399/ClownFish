@@ -6,7 +6,7 @@ import android.widget.Toast;
 /**
  * Created by hzwq on 2016/6/21.
  */
-public class Fangfa {
+public   class Fangfa {
 
     public static void getMax(Activity activity){
         Toast.makeText(activity,"max",Toast.LENGTH_LONG).show();

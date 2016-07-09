@@ -12,6 +12,7 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 
 import com.example.administrator.clownfish.R;
+import com.example.administrator.clownfish.tool.PhoneNumberUtils;
 import com.example.administrator.clownfish.tool.ToastUtil;
 
 public class LoginActivity extends BaseActivity implements View.OnClickListener {
@@ -76,9 +77,14 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         }else if(TextUtils.isEmpty(passWord)){
             ToastUtil.showWarningToast("密码不能为空",LoginActivity.this);
         }else{
-            Intent intent=new Intent();
-            intent.setClass(LoginActivity.this,MainActivity.class);
-            startActivity(intent);
+            if(PhoneNumberUtils.isMobileNO(phoneNum)){
+                Intent intent=new Intent();
+                intent.setClass(LoginActivity.this,MainActivity.class);
+                startActivity(intent);
+            }else{
+                ToastUtil.showSuccessToast("请输入正确的手机号码",LoginActivity.this);
+            }
+
         }
     }
 }

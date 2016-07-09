@@ -38,6 +38,8 @@
             android:layout_height="match_parent"
             android:layout_marginRight="40dp"
             android:layout_weight="1"
+            android:inputType="phone"
+            android:maxLength="11"
             android:background="@null" />
 
     </LinearLayout>
