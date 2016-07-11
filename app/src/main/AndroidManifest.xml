@@ -62,7 +62,8 @@
         <activity android:name=".Activity.PictureConversionActivity" />
         <activity android:name=".Activity.MainActivity" />
         <activity android:name=".Activity.LoginActivity" />
-        <activity android:name=".Activity.QRCodeActivity"></activity>
+        <activity android:name=".Activity.QRCodeActivity" />
+        <activity android:name=".Activity.StoreInformationActivity"></activity>
     </application>
 
 </manifest>

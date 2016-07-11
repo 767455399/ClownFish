@@ -33,7 +33,7 @@ public class MineFragment extends BaseFragment {
     private AllShowedGridView life_services;
     private ConvenienceServicesAdapter convenienceServicesAdapter;
     private LifeServicesAdapter lifeServicesAdapter;
-    private String convenienceServicesString[] = {"话费", "信用卡还款", "水费", "电费", "煤气"};
+    private String convenienceServicesString[] = {"商店信息", "信用卡还款", "水费", "电费", "煤气"};
     private String lifeImageViewPath[] = {"http://images.ali213.net/picfile/pic/2013-01-22/927_p19.jpg",
             "http://img.taopic.com/uploads/allimg/121118/240505-12111Q9533274.jpg",
             "http://www.sucaitianxia.com/Photo/pic/200910/nbzbs32.jpg",

@@ -20,6 +20,7 @@ import android.widget.Toast;
 import com.example.administrator.clownfish.Activity.ImageViewActivity;
 import com.example.administrator.clownfish.Activity.NBAActivity;
 import com.example.administrator.clownfish.Activity.QRCodeActivity;
+import com.example.administrator.clownfish.Activity.StoreInformationActivity;
 import com.example.administrator.clownfish.BaseFragment;
 import com.example.administrator.clownfish.R;
 import com.example.administrator.clownfish.view.AllShowedGridView;
@@ -113,6 +114,11 @@ public class HomePageFragment extends BaseFragment {
               if("二维码".equals(convenience[position])){
                   Intent intent=new Intent();
                   intent.setClass(getActivity(), QRCodeActivity.class);
+                  startActivity(intent);
+              }
+              if("网点".equals(convenience[position])){
+                  Intent intent=new Intent();
+                  intent.setClass(getActivity(), StoreInformationActivity.class);
                   startActivity(intent);
               }
           }

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="@drawable/bg_recyclerview"
+    android:layout_margin="@dimen/activity_horizontal_margin">
+
+    <com.example.administrator.clownfish.view.CircleImageView
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:id="@+id/shopImageView"
+        android:layout_width="90dp"
+        android:layout_height="90dp" />
+
+    <TextView
+        android:id="@+id/storeInformationNameTextView"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/shopImageView"
+        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_height="20dp"
+        android:text="小明"/>
+
+    <TextView
+        android:id="@+id/storeInformationShopTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/shopImageView"
+        android:layout_below="@+id/storeInformationNameTextView"
+        android:text="小明超市"/>
+
+    <TextView
+        android:id="@+id/storeInformationToExamineTextView"
+        android:layout_toRightOf="@+id/shopImageView"
+        android:layout_below="@+id/storeInformationShopTextView"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:gravity="center_vertical"
+        android:text="已审核"/>
+
+    <TextView
+        android:id="@+id/storeInformationTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:layout_toRightOf="@+id/shopImageView"
+        android:layout_below="@+id/storeInformationToExamineTextView"
+        android:text="20160606"/>
+
+
+
+</RelativeLayout>
