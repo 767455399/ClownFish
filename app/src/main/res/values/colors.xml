@@ -8,7 +8,7 @@
 
     <color name="splash_bg">#21CBF5</color>
 
-
+    <color name="grey"> #ebebeb</color>
     <color name="loading_color_1">#FE8C1D</color>
     <color name="loading_color_2">#37BC9B</color>
     <color name="loading_color_3">#3BB7E9</color>

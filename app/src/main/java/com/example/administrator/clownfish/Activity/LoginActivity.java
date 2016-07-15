@@ -14,6 +14,7 @@ import android.widget.EditText;
 import com.example.administrator.clownfish.R;
 import com.example.administrator.clownfish.tool.PhoneNumberUtils;
 import com.example.administrator.clownfish.tool.ToastUtil;
+import com.example.administrator.clownfish.tool.permanent;
 
 public class LoginActivity extends BaseActivity implements View.OnClickListener {
     private CheckBox passedwordChecked;
@@ -30,6 +31,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         regesitButton = (Button) findViewById(R.id.regesitButton);
         loginButton = (Button) findViewById(R.id.loginButton);
         passwordEditText = (EditText) findViewById(R.id.passwordEditText);
+        phoneNumEditText.setText(permanent.city+"123");
         /* 默认密码不可见*/
         passwordEditText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
         regesitButton.setOnClickListener(this);

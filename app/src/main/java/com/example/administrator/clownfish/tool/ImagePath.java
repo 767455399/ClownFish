@@ -4,7 +4,7 @@ package com.example.administrator.clownfish.tool;
  * Created by hzwq on 2016/7/11.
  */
 public class ImagePath {
-    public static String[] imagePath= {
+    public static String[] imagePath = {
             "http://g.hiphotos.baidu.com/image/pic/item/023b5bb5c9ea15ce2011ebe0b2003af33b87b25f.jpg",
 
             "http://cdn4.hbimg.cn/store/wm/bigfiles/201301/D525DEFC99C0D0C9FE8EAAA428.jpg",
@@ -466,7 +466,6 @@ public class ImagePath {
             "http://www.beifuni.com/uploadfile/2015/0330/20150330075520989.jpg",
 
 
-
             "http://g.hiphotos.baidu.com/image/pic/item/023b5bb5c9ea15ce2011ebe0b2003af33b87b25f.jpg",
 
             "http://cdn4.hbimg.cn/store/wm/bigfiles/201301/D525DEFC99C0D0C9FE8EAAA428.jpg",
@@ -551,7 +550,6 @@ public class ImagePath {
             "http://imgsrc.baidu.com/forum/pic/item/a044ad345982b2b7955d265931adcbef77099b68.jpg",
 
             "http://www.beifuni.com/uploadfile/2015/0330/20150330075520989.jpg",
-
 
 
             "http://g.hiphotos.baidu.com/image/pic/item/023b5bb5c9ea15ce2011ebe0b2003af33b87b25f.jpg",
@@ -596,4 +594,52 @@ public class ImagePath {
 
             "http://www.beifuni.com/uploadfile/2015/0330/20150330075520989.jpg",
     };
+    public static String[] productImagePath = {"http://cdnweb.b5m.com/web/cmsphp/article/201505/d6f5a329e22689ce197ce30de5b9cd16.jpg",
+
+            "http://file.youboy.com/d/138/30/55/3/848743.jpg ",
+
+            " http://files.b2b.cn/product/ProductImages/2009_12/28/28171206835_b.jpg",
+
+            "http://images3.qianyan.biz/qy/1/13/24/201312315252972996373.jpg ",
+
+            "http://pic.baike.soso.com/p/20130815/20130815102537-1937553718.jpg ",
+
+            "http://img2.21food.cn/img/album/2014/12/18/za3321340042.jpg ",
+
+            " http://szb.fynews.com.cn/UploadFiles/201304/201304181422491.jpg",
+
+            " http://img2.qihuiwang.com/E72902405456BBA5B116B3A67A479DF4_310_0_max_jpeg.jpg",
+
+            "http://b2b.szmall.com/data/files/store_1762/goods_174/small_201308121516143991.png ",
+
+            "http://img.xyzd.cn/forum/201205/16/091015dnabhpo4cloubocb.jpg ",
+
+
+            " http://source.7808.cn/item_album/20140107/13890561036793.jpg",
+
+            " http://file.youboy.com/d/160/57/78/2/561682.jpg",
+
+            "http://img4.imgtn.bdimg.com/it/u=3859606211,2099095269&fm=21&gp=0.jpg ",
+
+            " http://img2.zn.cn/Commodity/22780/d294456bb44f48df9af27b636c668cf3/d294456bb44f48df9af27b636c668cf3.jpg",
+
+            "http://i5.dldcdn.com/upload/store/goods/20150526/75/132587_9803e92e23335a326c149d5bd12b411e_max.jpg ",
+
+            " http://www.jiayixing.com.cn/uploads/image/1305/17/1305170240541zp.jpg",
+
+            " http://image2.bestb2b.com/upload/pic/2012/10/13/193/939943/135279123671834.jpg",
+
+            " http://img0.imgtn.bdimg.com/it/u=2115481804,813194570&fm=21&gp=0.jpg",
+
+            "http://img2.makepolo.net/images/formals/img/product/456/267/5ba00cc34d169dbb4d5b093ca74e1c5d.jpg ",
+
+            " http://s6.sinaimg.cn/bmiddle/004mtottgy6IK46reJfb5&690",
+
+            "http://img4.bbs.szhome.com/UploadFiles/Images/2010/03/19/0319232011296.jpg ",
+
+            " http://image1.nowec.com/2013/11/26/sudahuang0001/1/2-206-31610889.jpg",
+
+            " http://imgsrc.baidu.com/forum/w%3D580/sign=482e5494544e9258a63486e6ac83d1d1/b912c8fcc3cec3fdbd0e1b85d488d43f87942709.jpg",
+
+            " http://image2.bestb2b.com/upload/pic/2014/001/5/105/964105/138890316828441.jpg"};
 }

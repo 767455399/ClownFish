@@ -1,7 +1,13 @@
 package com.example.administrator.clownfish.Activity;
 
+import android.Manifest;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
+import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -17,8 +23,14 @@ import com.example.administrator.clownfish.R;
 import com.example.administrator.clownfish.fragmentAdapter.FragmentPagerItemAdapter;
 import com.example.administrator.clownfish.fragmentAdapter.FragmentPagerItems;
 import com.example.administrator.clownfish.fragmentAdapter.NotScrollViewPager;
+import com.example.administrator.clownfish.map.PoiKeywordSearchActivity;
+import com.example.administrator.clownfish.tool.Location;
+import com.example.administrator.clownfish.tool.ToastUtil;
 import com.example.administrator.clownfish.view.Fangfa;
 import com.example.administrator.clownfish.view.Gouzhaohanshu;
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.common.api.GoogleApiClient;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
     private NotScrollViewPager mainPager;
@@ -37,23 +49,24 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private TextView mineTextView;
     private String abc;
     public static String wangqing;
-    Gouzhaohanshu gouzhaohanshu=new Gouzhaohanshu("wangqing");
-    Gouzhaohanshu gouzhaohanshu1=new Gouzhaohanshu("aa","bb");
-    private String blue="blue";
+    Location location;
+
+    Gouzhaohanshu gouzhaohanshu = new Gouzhaohanshu("wangqing");
+    Gouzhaohanshu gouzhaohanshu1 = new Gouzhaohanshu("aa", "bb");
+    private String blue = "blue";
     private String red;
 
     @Override
     protected void initView() {
         setContentView(R.layout.activity_main);
-       /* Intent intent=new Intent();
-        intent.setClass(MainActivity.this,ViewPagerActivty.class);
-        startActivity(intent);*/
-        Car car1=Car.getCar();
+        location=new Location(MainActivity.this);
+        getLocation();
+        Car car1 = Car.getCar();
         car1.setCarColor(blue);
-        Car car2=Car.getCar();
+        Car car2 = Car.getCar();
         car2.getCarColor();
 
-        Fangfa.getMax(this);
+     /*   Fangfa.getMax(this);*/
       /*  Fangfa fangfa=new Fangfa();
         fangfa.getMin(this);*/
         homePageLinearLayout = (LinearLayout) findViewById(R.id.homePageLinearLayout);
@@ -87,7 +100,21 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mainPager.setAdapter(fragmentPagerItemAdapter);
     }
 
+    private void getLocation() {
+        location.setCallBack(new Location.LocationCallBack() {
+            @Override
+            public void getLocation(String address) {
+                if(!TextUtils.isEmpty(address)){
+                    ToastUtil.showSuccessToast(address,MainActivity.this);
+                    Location.stopLocation();
+                 /*   Intent intent=new Intent();
+                    intent.setClass(MainActivity.this,PoiKeywordSearchActivity.class);
+                    startActivity(intent);*/
+                }
 
+            }
+        });
+    }
 
 
     @Override

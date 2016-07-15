@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">ClownFish</string>
+    <string name="app_name">小丑鱼</string>
     <string name="home_page">首页</string>
-    <string name="hi_tao">嗨淘</string>
+    <string name="hi_tao">地图</string>
     <string name="wallet">钱包</string>
     <string name="mine">我</string>
     <string name="qr_code">我</string>
@@ -10,5 +10,12 @@
     <string name="tomorrow">明天</string>
     <string name="bank_card">银行卡</string>
     <string name="image_view_description">imageView</string>
-
+    <string name="notifyTitle">提示</string>
+    <string name="notifyMsg">当前应用缺少必要权限。\n\n请点击\"设置\"-\"权限\"-打开所需权限。</string>
+    <string name="setting">设置</string>
+    <string name="cancel">取消</string>
+    <string name="gpsfollow">追随</string>
+    <string name="gpslocate">定位</string>
+    <string name="gpsrotate">旋转</string>
+    <string name="no_result">对不起，没有搜索到相关数据！</string>
 </resources>

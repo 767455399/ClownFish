@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.administrator.clownfish.R;
+import com.example.administrator.clownfish.map.PoiKeywordSearchActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,7 +74,7 @@ public class ViewPagerActivty extends BaseActivity implements View.OnClickListen
         switch (v.getId()){
             case R.id.textView:
                 Intent intent=new Intent();
-                intent.setClass(ViewPagerActivty.this,LoginActivity.class);
+                intent.setClass(ViewPagerActivty.this,MainActivity.class);
                 startActivity(intent);
                 break;
             default:

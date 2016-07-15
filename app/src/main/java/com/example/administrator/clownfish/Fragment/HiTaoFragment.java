@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.amap.api.maps.MapView;
 import com.example.administrator.clownfish.BaseFragment;
 import com.example.administrator.clownfish.R;
 

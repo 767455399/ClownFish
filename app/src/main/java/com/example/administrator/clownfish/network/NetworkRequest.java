@@ -3,6 +3,7 @@ package com.example.administrator.clownfish.network;
 import android.os.Handler;
 import android.os.Looper;
 
+import com.example.administrator.clownfish.modle.ProductInformationModle;
 import com.example.administrator.clownfish.modle.StoreInformationModle;
 import com.example.administrator.clownfish.myCallBack;
 import com.google.gson.Gson;
@@ -21,7 +22,7 @@ import okhttp3.Response;
 public class NetworkRequest {
 
     public static void getStoreInformaition(String path, final myCallBack<StoreInformationModle> mycallback) {
-//创建okHttpClient对象
+        //创建okHttpClient对象
         OkHttpClient mOkHttpClient = new OkHttpClient();
         //创建一个Request
         final Request request = new Request.Builder()
@@ -54,4 +55,39 @@ public class NetworkRequest {
             }
         });
     }
+
+    public static void getProductInformation(String path,final myCallBack<ProductInformationModle>myCallBack){
+        //创建okHttpClient对象
+        OkHttpClient mOkHttpClient = new OkHttpClient();
+        //创建一个Request
+        final Request request = new Request.Builder()
+                .url(path)
+                .build();
+        //new call
+        final Call call=mOkHttpClient.newCall(request);
+        call.enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                new Handler(Looper.getMainLooper()).post(new Runnable() {
+                    @Override
+                    public void run() {
+                     /*  myCallBack.Fail(e.toString());*/
+                    }
+                });
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                final String htmlStr = response.body().string();
+                new Handler(Looper.getMainLooper()).post(new Runnable() {
+                    @Override
+                    public void run() {
+                           /* 直接通过Gson解析服务器返回的数据*/
+                        myCallBack.Success(new Gson().fromJson(htmlStr,ProductInformationModle.class));
+                    }
+                });
+            }
+        });
+    }
 }
+
