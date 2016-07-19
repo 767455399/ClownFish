@@ -5,7 +5,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="transparent">#00000000</color>
     <color name="white">#FFFFFF</color>
-
+    <color name="black">#2B2B2B</color>
     <color name="splash_bg">#21CBF5</color>
 
     <color name="grey"> #ebebeb</color>

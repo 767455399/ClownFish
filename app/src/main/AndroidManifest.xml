@@ -9,7 +9,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
-
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
     <!-- 用于进行网络定位 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <!-- 用于访问GPS定位 -->
@@ -89,7 +89,10 @@
         <activity android:name=".Activity.CheckPermissionsActivity" />
         <activity android:name=".Activity.MapViewActivity" />
         <activity android:name=".map.PoiKeywordSearchActivity" />
-        <activity android:name=".Activity.ProductInformationActivity"></activity>
+        <activity android:name=".Activity.ProductInformationActivity" />
+        <activity android:name=".Activity.ScanCodeActivity" />
+        <activity android:name=".Activity.ContactsActivity" />
+        <activity android:name=".Activity.ContactListActivity"></activity>
     </application>
 
 </manifest>

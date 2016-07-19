@@ -23,7 +23,7 @@ public class StoreInformationPresent implements BasePresenter<StoreInformationAc
     public void getStoreInformation(Boolean refresh) {
         view.showLoadingDialog();
         if (refresh) {
-            view.pageIndex = 1;
+            view.pageIndex = 0;
         } else {
             view.pageIndex++;
         }

@@ -7,7 +7,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <style name="ActionBarPopupThemeOverlay" parent="ThemeOverlay.AppCompat.Light" />
     <style name="Base.Dialog" parent="Theme.AppCompat.Light.Dialog" />
 
 <!--loadingdialog style-->
@@ -16,6 +16,12 @@
         <item name="android:windowCloseOnTouchOutside">true</item>
         <item name="android:windowBackground">@color/transparent</item>
         <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+    <style name="Toolbar.TitleTextStyle" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/toolbar_title_color</item>
     </style>
 
 </resources>

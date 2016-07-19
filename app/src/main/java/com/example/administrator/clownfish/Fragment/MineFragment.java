@@ -10,6 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.administrator.clownfish.Activity.ContactsActivity;
 import com.example.administrator.clownfish.Activity.DisplayPictureActivity;
 import com.example.administrator.clownfish.Activity.ImageViewActivity;
 import com.example.administrator.clownfish.Activity.PhotoBrowseActivity;
@@ -17,6 +18,8 @@ import com.example.administrator.clownfish.Activity.TextActivity;
 import com.example.administrator.clownfish.BaseFragment;
 import com.example.administrator.clownfish.R;
 import com.example.administrator.clownfish.view.AllShowedGridView;
+import com.example.administrator.clownfish.view.Shimmer;
+import com.example.administrator.clownfish.view.ShimmerTextView;
 import com.squareup.picasso.Picasso;
 
 /**
@@ -29,11 +32,13 @@ import com.squareup.picasso.Picasso;
  * 修改备注：
  */
 public class MineFragment extends BaseFragment {
+    private ShimmerTextView balanceTextView;
+    private Shimmer shimmer;
     private AllShowedGridView convenience_services;
     private AllShowedGridView life_services;
     private ConvenienceServicesAdapter convenienceServicesAdapter;
     private LifeServicesAdapter lifeServicesAdapter;
-    private String convenienceServicesString[] = {"商店信息", "信用卡还款", "水费", "电费", "煤气"};
+    private String convenienceServicesString[] = {"联系人", "信用卡还款", "水费", "电费", "煤气"};
     private String lifeImageViewPath[] = {"http://images.ali213.net/picfile/pic/2013-01-22/927_p19.jpg",
             "http://img.taopic.com/uploads/allimg/121118/240505-12111Q9533274.jpg",
             "http://www.sucaitianxia.com/Photo/pic/200910/nbzbs32.jpg",
@@ -61,9 +66,22 @@ public class MineFragment extends BaseFragment {
     protected void initView(View view) {
         convenience_services = (AllShowedGridView) view.findViewById(R.id.convenience_services);
         life_services = (AllShowedGridView) view.findViewById(R.id.life_services);
+        balanceTextView=(ShimmerTextView)view.findViewById(R.id.balanceTextView);
         setServiceAdapter();
         setLifeServiceAdapter();
+        start();
     }
+
+    private void start() {
+        if (shimmer != null && shimmer.isAnimating()) {
+            shimmer.cancel();
+        } else {
+            shimmer = new Shimmer();
+            shimmer.start(balanceTextView);
+        }
+    }
+
+
 
     private void setLifeServiceAdapter() {
         life_services.post(new Runnable() {
@@ -83,8 +101,8 @@ public class MineFragment extends BaseFragment {
                 intent.putExtras(bundle);
                 startActivity(intent);*/
                 intent.setClass(getActivity(), ImageViewActivity.class);
-                Bundle bundle=new Bundle();
-                bundle.putString("imagePath",lifeImageViewPath[position]);
+                Bundle bundle = new Bundle();
+                bundle.putString("imagePath", lifeImageViewPath[position]);
                 intent.putExtras(bundle);
                 startActivity(intent);
             }
@@ -113,13 +131,11 @@ public class MineFragment extends BaseFragment {
         convenience_services.setOnItemClickListener(new AllShowedGridView.OnItemClickListener() {
             @Override
             public void onClick(int position) {
-              /*  Intent intent = new Intent();
-                intent.setClass(getActivity(), TextActivity.class);
-                Bundle bundle = new Bundle();
-                bundle.putString("key", convenienceServicesString[position]);
-                intent.putExtras(bundle);
-                startActivity(intent);*/
-
+                if ("联系人".equals(convenienceServicesString[position])) {
+                    Intent intent = new Intent();
+                    intent.setClass(getActivity(),ContactsActivity.class);
+                    startActivity(intent);
+                }
             }
         });
     }

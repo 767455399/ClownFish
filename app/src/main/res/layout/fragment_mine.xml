@@ -24,13 +24,15 @@
            android:text="账户余额（元）"/>
 
 
-       <TextView
+       <com.example.administrator.clownfish.view.ShimmerTextView
            android:id="@+id/balanceTextView"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:text="0.00"
+           android:textColor="@color/black"
            android:textSize="50sp"
            android:gravity="center"/>
+        <!--  style="@style/MyTextView"-->
 
        <TextView
            android:text="账户余额为小泰乐活和口袋钱包公用余额，不包括借款可用额度"
@@ -96,7 +98,7 @@
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="便民服务"/>
+            android:text="NBA"/>
 
         <View
             android:layout_width="match_parent"

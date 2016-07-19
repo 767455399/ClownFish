@@ -21,6 +21,7 @@ import com.example.administrator.clownfish.Activity.ImageViewActivity;
 import com.example.administrator.clownfish.Activity.NBAActivity;
 import com.example.administrator.clownfish.Activity.ProductInformationActivity;
 import com.example.administrator.clownfish.Activity.QRCodeActivity;
+import com.example.administrator.clownfish.Activity.ScanCodeActivity;
 import com.example.administrator.clownfish.Activity.StoreInformationActivity;
 import com.example.administrator.clownfish.BaseFragment;
 import com.example.administrator.clownfish.R;
@@ -49,7 +50,7 @@ public class HomePageFragment extends BaseFragment {
             "http://g.hiphotos.baidu.com/image/pic/item/f31fbe096b63f62475632a298444ebf81a4ca3d9.jpg",
             "http://h.hiphotos.baidu.com/image/pic/item/7a899e510fb30f24fd5cfc29cb95d143ac4b03d1.jpg"
     };
-    private String[] convenience={"NBA","天气","名言","网点","语音验证","二维码","商品"};
+    private String[] convenience={"NBA","天气","名言","网点","语音验证","二维码","商品","扫码"};
 
 
     private RecyclerView homePageRecyclerView;
@@ -126,6 +127,9 @@ public class HomePageFragment extends BaseFragment {
                   Intent intent=new Intent();
                   intent.setClass(getActivity(), ProductInformationActivity.class);
                   startActivity(intent);
+              }
+              if("扫码".equals(convenience[position])){
+                  ScanCodeActivity.startForScanResult(HomePageFragment.this);
               }
           }
       });

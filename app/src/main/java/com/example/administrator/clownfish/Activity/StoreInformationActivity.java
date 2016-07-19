@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StoreInformationActivity extends BaseActivity implements SwipeRefreshLayout.OnRefreshListener {
-    private String path = "http://www.jutongbao.com/jtb/phone/newshop_list.action?companyCode=05710001&userId=131D5455-C4DD-410E-8EDE-8BD1A4E371E4&pageIndex=1";
+    private String path = "http://www.jutongbao.com/jtb/phone/newshop_list.action?companyCode=05710001&userId=131D5455-C4DD-410E-8EDE-8BD1A4E371E4&pageIndex=0";
     private RecyclerView storeInformationRecyclerView;
     private StoreInformationAdapter storeInformationAdapter;
     private StoreInformationPresent present;
@@ -33,7 +33,7 @@ public class StoreInformationActivity extends BaseActivity implements SwipeRefre
     public static Boolean refresh = false;
     private List<StoreInformationModle.ListBean> storeInformationList = new ArrayList();
     public SwipeRefreshLayout storeInformationSwipeRefreshLayout;
-    public int pageIndex = 1;
+    public int pageIndex = 0;
     private int pageSize=10;
     private Boolean hasNextPage;
 
@@ -82,7 +82,7 @@ public class StoreInformationActivity extends BaseActivity implements SwipeRefre
 
     @Override
     public void onRefresh() {
-        pageIndex = 1;
+        pageIndex = 0;
         refresh = true;
         nextPageIsLoading=true;
         present.getStoreInformation(refresh);
@@ -97,7 +97,7 @@ public class StoreInformationActivity extends BaseActivity implements SwipeRefre
         }else{
             hasNextPage=false;
         }
-        if(pageIndex==1){
+        if(pageIndex==0){
             if(storeInformationModle.getList().size()>0){
 
             }else{

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@drawable/bg_recyclerview"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -58,9 +61,9 @@
     <Button
         android:id="@+id/purchaseButton"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
-        android:layout_centerVertical="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
-        android:background="@drawable/button_background"
+        android:layout_marginBottom="15dp"
         android:layout_width="60dp"
         android:layout_height="50dp"
         android:layout_alignParentRight="true"

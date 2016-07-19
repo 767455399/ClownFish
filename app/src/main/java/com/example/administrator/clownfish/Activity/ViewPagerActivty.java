@@ -74,7 +74,7 @@ public class ViewPagerActivty extends BaseActivity implements View.OnClickListen
         switch (v.getId()){
             case R.id.textView:
                 Intent intent=new Intent();
-                intent.setClass(ViewPagerActivty.this,MainActivity.class);
+                intent.setClass(ViewPagerActivty.this,ContactListActivity.class);
                 startActivity(intent);
                 break;
             default:
