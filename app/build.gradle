@@ -1,13 +1,25 @@
 apply plugin: 'com.android.application'
 
+dependencies {
+    compile fileTree(include: '*.jar', dir: 'libs')
+    compile files('libs/json-lib-2.4-jdk15.jar')
+    compile 'org.json:json:20160212'
+}
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
 
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
     defaultConfig {
         applicationId "com.example.administrator.clownfish"
         minSdkVersion 15
-        targetSdkVersion 23
+        targetSdkVersion 22
         versionCode 1
         versionName "1.0"
     }
@@ -24,12 +36,13 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.3.0'
     /*compile 'com.umeng.analytics:analytics:latest.integration'
-                                    compile files('libs/umeng-analytics-v5.6.7.jar')*/
+                                                compile files('libs/umeng-analytics-v5.6.7.jar')*/
     compile 'com.android.support:recyclerview-v7:23.4.0'
     compile 'com.google.code.gson:gson:2.6.2'
     compile 'com.squareup.retrofit2:converter-gson:2.0.2'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.android.support:design:23.4.0'
+    compile 'net.grandcentrix.tray:tray:0.10.0'
     compile 'io.reactivex:rxjava:1.1.6'
     compile 'io.reactivex:rxandroid:1.2.0'
     compile 'com.squareup.retrofit2:retrofit:2.0.2'
@@ -38,4 +51,5 @@ dependencies {
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
     compile files('libs/com.jack.qrcode.jar')
     compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile files('libs/AMap3DMap_3.3.2_AMapNavi_1.8.0_AMapSearch_3.3.0_AMapLocation_2.6.0_20160628.jar')
 }

@@ -2,7 +2,12 @@ package com.example.administrator.clownfish.Activity;
 
 import android.Manifest;
 import android.annotation.TargetApi;
+import android.content.AsyncQueryHandler;
+import android.content.ContentResolver;
+import android.content.ContentValues;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
@@ -21,9 +26,12 @@ import com.example.administrator.clownfish.tool.ContactsUtil;
 import com.example.administrator.clownfish.tool.PermissionUtil;
 import com.example.administrator.clownfish.view.ListSideBar;
 
+import org.json.JSONArray;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 public class ContactsActivity extends BaseActivity {
     private static final int REQUEST_CODE_CONTACTS_PERMISSIONS = 0x0001;
@@ -33,6 +41,9 @@ public class ContactsActivity extends BaseActivity {
     private ListSideBar sideBar;
     private TextView popupTextView;
     private ContactsPresent present;
+    private AsyncQueryHandler asyncQuery;
+    static List<ContentValues> list = new ArrayList<ContentValues>();
+    private static final String NAME = "name", NUMBER = "number", SORT_KEY = "sort_key";
     /**
      * 汉字转换成拼音的类
      */
@@ -41,6 +52,8 @@ public class ContactsActivity extends BaseActivity {
     @Override
     protected void initView() {
         setContentView(R.layout.activity_contacts);
+        list.clear();
+        asyncQuery = new MyAsyncQueryHandler(getContentResolver());
         bind();
         contactsRecyclerView = (RecyclerView) findViewById(R.id.contactsRecyclerView);
         contactsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -58,15 +71,58 @@ public class ContactsActivity extends BaseActivity {
                 return lhs.getName().compareTo(rhs.getName());
             }
         });
+
+        Uri uri = Uri.parse("content://com.android.contacts/data/phones");
+        String[] projection = { "_id", "display_name", "data1", "sort_key" };
+        asyncQuery.startQuery(0, null, uri, projection, null, null,
+                "sort_key COLLATE LOCALIZED asc");
+        contactsAdapter.notifyDataSetChanged();
+
     }
 
     private boolean move = false;
-
     public void setAdapter(ArrayList<LocalContactModel> contacts) {
         contactModels.clear();
-        ContactListActivity.getContactlist();
+      /*  contactsAdapter.notifyDataSetChanged();*/
         contactModels.addAll(ContactsUtil.getContactList());
     }
+
+
+    private class MyAsyncQueryHandler extends AsyncQueryHandler {
+
+
+        public MyAsyncQueryHandler(ContentResolver cr) {
+            super(cr);
+        }
+
+        @Override
+        protected void onQueryComplete(int token, Object cookie, Cursor cursor) {
+            if (cursor != null && cursor.getCount() > 0) {
+                cursor.moveToFirst();
+                for (int i = 0; i < cursor.getCount(); i++) {
+                    ContentValues cv = new ContentValues();
+                    cursor.moveToPosition(i);
+                    String name = cursor.getString(1);
+                    String number = cursor.getString(2);
+                    String sortKey = cursor.getString(3);
+                    if (number.startsWith("+86")) {
+                        cv.put(NAME, name);
+                        cv.put(NUMBER, number.substring(3));  //ȥ��+86
+                        cv.put(SORT_KEY, sortKey);
+                    } else {
+                        cv.put(NAME, name);
+                        cv.put(NUMBER, number);
+                        cv.put(SORT_KEY, sortKey);
+                    }
+                    list.add(cv);
+                }
+
+            }
+
+        }
+
+    }
+
 
     @Override
     protected void loadData() {
@@ -155,14 +211,16 @@ public class ContactsActivity extends BaseActivity {
 
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
-            final LocalContactModel localContactModel = contactModels.get(position);
+           /* final LocalContactModel localContactModel = contactModels.get(position);
             holder.contactsListItemNameTextView.setText(localContactModel.getName());
-            holder.contactsListItemNumberTextView.setText(localContactModel.getPhone());
+            holder.contactsListItemNumberTextView.setText(localContactModel.getPhone());*/
+            holder.contactsListItemNameTextView.setText(list.get(position).get("name").toString());
+            holder.contactsListItemNumberTextView.setText(list.get(position).get("number").toString());
         }
 
         @Override
         public int getItemCount() {
-            return contactModels.size();
+            return list.size();
         }
 
         public int getPosition(String s) {
@@ -174,10 +232,7 @@ public class ContactsActivity extends BaseActivity {
                 }
             }
             return -1;
-
         }
-
-
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
