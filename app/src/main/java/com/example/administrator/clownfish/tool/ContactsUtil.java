@@ -16,7 +16,6 @@ import java.util.ArrayList;
 public class ContactsUtil {
 
 
-
     public static ArrayList<LocalContactModel> getContactList() {
         ArrayList<LocalContactModel> arrayList = new ArrayList<>();
         fetchContacts(arrayList);

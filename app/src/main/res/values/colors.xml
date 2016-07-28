@@ -58,4 +58,5 @@
     <color name="color_indicator_selected">#FFFFFFFF</color>
     <color name="tab_text_checked">#FF444444</color>
     <color name="tab_text_default">#99444444</color>
+    <color name="sv_blue">#688fdb</color>
 </resources>

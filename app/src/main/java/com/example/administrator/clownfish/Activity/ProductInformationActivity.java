@@ -19,6 +19,7 @@ import com.example.administrator.clownfish.present.ProductInformationPresent;
 import com.example.administrator.clownfish.tool.ImagePath;
 import com.example.administrator.clownfish.tool.ToastUtil;
 import com.example.administrator.clownfish.view.CircleImageView;
+import com.example.administrator.clownfish.view.ShoppingView;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -100,13 +101,18 @@ public class ProductInformationActivity extends BaseActivity {
                 rvh.productName.setText(productInformationList.get(position-1).get(1).toString());
                 rvh.priceTextView.setText(productInformationList.get(position-1).get(2).toString());
                 Picasso.with(ProductInformationActivity.this).load(ImagePath.productImagePath[position]).error(R.mipmap.ic_launcher).into(rvh.productInformationCircleImageView);
-                rvh.purchaseButton.setOnClickListener(new View.OnClickListener() {
+                rvh.purchaseButton.setOnShoppingClickListener(new ShoppingView.ShoppingClickListener() {
                     @Override
-                    public void onClick(View v) {
-                        ToastUtil.showSuccessToast("添加到购物车成功", ProductInformationActivity.this);
+                    public void onAddClick(int num) {
+                        //总计次数
+                       /*   ToastUtil.showSuccessToast(num+""+"onAddClick",ProductInformationActivity.this);*/
+                    }
+
+                    @Override
+                    public void onMinusClick(int num) {
+                     /*   ToastUtil.showSuccessToast(num+""+"onMinusClick",ProductInformationActivity.this);*/
                     }
                 });
-
             }
         /*    if (holder instanceof NoRecordViewHolder) {
                 NoRecordViewHolder nrvh = (NoRecordViewHolder) holder;
@@ -158,14 +164,14 @@ public class ProductInformationActivity extends BaseActivity {
     }
 
     class RecordViewHolder extends RecyclerView.ViewHolder {
-        private Button purchaseButton;
+        private ShoppingView purchaseButton;
         private TextView priceTextView;
         private TextView productName;
         private CircleImageView productInformationCircleImageView;
 
         public RecordViewHolder(View itemView) {
             super(itemView);
-            purchaseButton = (Button) itemView.findViewById(R.id.purchaseButton);
+            purchaseButton = (ShoppingView) itemView.findViewById(R.id.purchaseButton);
             priceTextView = (TextView) itemView.findViewById(R.id.priceTextView);
             productName = (TextView) itemView.findViewById(R.id.productName);
             productInformationCircleImageView = (CircleImageView) itemView.findViewById(R.id.productInformationCircleImageView);

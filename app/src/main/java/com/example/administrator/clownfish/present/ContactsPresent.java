@@ -1,5 +1,6 @@
 package com.example.administrator.clownfish.present;
 
+import com.example.administrator.clownfish.Activity.ContactListActivity;
 import com.example.administrator.clownfish.Activity.ContactsActivity;
 import com.example.administrator.clownfish.tool.ContactsUtil;
 import com.example.administrator.clownfish.view.BasePresenter;
@@ -12,11 +13,11 @@ import rx.schedulers.Schedulers;
 /**
  * Created by hzwq on 2016/7/18.
  */
-public class ContactsPresent implements BasePresenter<ContactsActivity> {
-    private ContactsActivity view;
+public class ContactsPresent implements BasePresenter<ContactListActivity> {
+    private ContactListActivity view;
 
     @Override
-    public void bind(ContactsActivity view) {
+    public void bind(ContactListActivity view) {
         this.view = view;
         loadContactList();
     }

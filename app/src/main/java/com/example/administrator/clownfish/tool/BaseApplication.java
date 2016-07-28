@@ -7,7 +7,6 @@ import android.content.Context;
  * Created by hzwq on 2016/7/19.
  */
 public class BaseApplication extends Application {
-
     private static Context applicationContext;
 
     public BaseApplication() {
@@ -17,9 +16,9 @@ public class BaseApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Thread.setDefaultUncaughtExceptionHandler(CrashHandler.getInstance());
+     /*   Thread.setDefaultUncaughtExceptionHandler(CrashHandler.getInstance());*/
     }
-
+/*要得到数据前，要先set,然后再get*/
 
     public static Context getContext() {
         return applicationContext;
@@ -30,14 +29,5 @@ public class BaseApplication extends Application {
             applicationContext = context;
         }
     }
-
-    public static Boolean getIsLogin() {
-        return SharedPreferencesUtil.getBoolean("loginStatus", false);
-    }
-
-    public static void setIsLogin(Boolean isLogin) {
-        SharedPreferencesUtil.save("loginStatus", isLogin);
-    }
-
 
 }

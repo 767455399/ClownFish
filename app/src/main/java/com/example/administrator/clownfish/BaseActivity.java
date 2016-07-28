@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.administrator.clownfish.dialog.LoadingDialog;
+import com.example.administrator.clownfish.tool.BaseApplication;
+import com.example.administrator.clownfish.tool.SharedPreferencesUtil;
 /*
 import com.umeng.analytics.MobclickAgent;
 */
@@ -18,6 +20,8 @@ public abstract class BaseActivity extends AppCompatActivity {
         loadingDialog = new LoadingDialog(BaseActivity.this);
         initView();
         loadData();
+        BaseApplication.setContext(getApplicationContext());
+        SharedPreferencesUtil.init(getApplicationContext());
     }
 
     protected abstract void initView();

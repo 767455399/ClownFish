@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/topLineImageView"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#D3D4D4" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textColor="#6C6C6C"
+        android:layout_weight="1.0"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:paddingTop="5dip"
+        android:paddingBottom="5dip"
+        android:textSize="@dimen/text_size_normal"
+        android:text="A" />
+
+    <ImageView
+        android:id="@+id/middlelineImageView"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_height="1px"
+        android:background="#D3D4D4" />
+
+    <TextView
+        android:id="@+id/cityNameTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_weight="1.0"
+        android:textColor="#333333"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:paddingTop="10dip"
+        android:paddingBottom="10dip"
+        android:textSize="@dimen/text_size_normal"
+        android:text="武汉" />
+
+    <ImageView
+        android:id="@+id/splitLineImageView"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_height="1px"
+        android:background="#EAEAEA" />
+
+
+
+
+
+</LinearLayout>

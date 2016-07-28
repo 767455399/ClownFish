@@ -10,10 +10,16 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.administrator.clownfish.Activity.ChronometerActivity;
+import com.example.administrator.clownfish.Activity.CityListActivity;
+import com.example.administrator.clownfish.Activity.ContactListActivity;
 import com.example.administrator.clownfish.Activity.ContactsActivity;
 import com.example.administrator.clownfish.Activity.DisplayPictureActivity;
 import com.example.administrator.clownfish.Activity.ImageViewActivity;
+import com.example.administrator.clownfish.Activity.PaySuccessActivity;
 import com.example.administrator.clownfish.Activity.PhotoBrowseActivity;
+import com.example.administrator.clownfish.Activity.ShineButtonActivity;
+import com.example.administrator.clownfish.Activity.ShoppingViewActivity;
 import com.example.administrator.clownfish.Activity.TextActivity;
 import com.example.administrator.clownfish.BaseFragment;
 import com.example.administrator.clownfish.R;
@@ -38,7 +44,7 @@ public class MineFragment extends BaseFragment {
     private AllShowedGridView life_services;
     private ConvenienceServicesAdapter convenienceServicesAdapter;
     private LifeServicesAdapter lifeServicesAdapter;
-    private String convenienceServicesString[] = {"联系人", "信用卡还款", "水费", "电费", "煤气"};
+    private String convenienceServicesString[] = {"联系人", "支付成功", "计时器", "城市列表", "加入购物车","点赞"};
     private String lifeImageViewPath[] = {"http://images.ali213.net/picfile/pic/2013-01-22/927_p19.jpg",
             "http://img.taopic.com/uploads/allimg/121118/240505-12111Q9533274.jpg",
             "http://www.sucaitianxia.com/Photo/pic/200910/nbzbs32.jpg",
@@ -133,9 +139,35 @@ public class MineFragment extends BaseFragment {
             public void onClick(int position) {
                 if ("联系人".equals(convenienceServicesString[position])) {
                     Intent intent = new Intent();
-                    intent.setClass(getActivity(),ContactsActivity.class);
+                    intent.setClass(getActivity(),ContactListActivity.class);
                     startActivity(intent);
                 }
+                if("支付成功".equals(convenienceServicesString[position])){
+                    Intent intent = new Intent();
+                    intent.setClass(getActivity(),PaySuccessActivity.class);
+                    startActivity(intent);
+                }
+                if("计时器".equals(convenienceServicesString[position])){
+                    Intent intent=new Intent();
+                    intent.setClass(getActivity(),ChronometerActivity.class);
+                    startActivity(intent);
+                }
+                if("城市列表".equals(convenienceServicesString[position])){
+                    Intent intent=new Intent();
+                    intent.setClass(getActivity(), CityListActivity.class);
+                    startActivity(intent);
+                }
+                if("加入购物车".equals(convenienceServicesString[position])){
+                    Intent intent=new Intent();
+                    intent.setClass(getActivity(),ShoppingViewActivity.class);
+                    startActivity(intent);
+                }
+                if("点赞".equals(convenienceServicesString[position])){
+                    Intent intent=new Intent();
+                    intent.setClass(getActivity(), ShineButtonActivity.class);
+                    startActivity(intent);
+                }
+
             }
         });
     }

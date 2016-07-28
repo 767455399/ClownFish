@@ -92,7 +92,21 @@
         <activity android:name=".Activity.ProductInformationActivity" />
         <activity android:name=".Activity.ScanCodeActivity" />
         <activity android:name=".Activity.ContactsActivity" />
-        <activity android:name=".Activity.ContactListActivity"></activity>
+        <activity android:name=".Activity.ContactListActivity" />
+        <activity android:name=".Activity.PaySuccessActivity" />
+        <activity android:name=".Activity.HttpActivity" />
+        <activity android:name=".Activity.LoadImageActivity" />
+        <activity
+            android:name=".Activity.GestureLockActivity"
+            android:launchMode="singleTop" />
+        <activity android:name=".Activity.ChronometerActivity" />
+        <activity
+            android:name=".Activity.CityListActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Activity.CityListRecyclerActivity" />
+        <activity android:name=".Activity.ShoppingViewActivity" />
+        <activity android:name=".Activity.ShineButtonActivity" />
+        <activity android:name=".Activity.DoublePullActivity"></activity>
     </application>
 
 </manifest>

@@ -173,7 +173,7 @@ public class ContactsActivity extends BaseActivity {
     @TargetApi(Build.VERSION_CODES.M)
     private void checkContactsPermission() {
         if (PermissionUtil.checkPermission(ContactsActivity.this, Manifest.permission.READ_CONTACTS)) {
-            present.bind(this);
+       /*     present.bind(this);*/
         } else {
             requestPermissions(new String[]{Manifest.permission.READ_CONTACTS},
                     REQUEST_CODE_CONTACTS_PERMISSIONS);
@@ -194,7 +194,7 @@ public class ContactsActivity extends BaseActivity {
                 } else {
                     // Permission GRANTED
                     present = new ContactsPresent();
-                    present.bind(this);
+                 /*   present.bind(this);*/
                 }
                 break;
             default:

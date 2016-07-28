@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@drawable/bg_recyclerview"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginTop="10dp"
     android:layout_marginLeft="@dimen/activity_horizontal_margin"
     android:layout_marginRight="@dimen/activity_horizontal_margin"
@@ -20,7 +21,7 @@
         android:layout_width="70dp"
         android:layout_toRightOf="@+id/productInformationCircleImageView"
         android:gravity="center_vertical"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:text="产品名称:"
@@ -30,7 +31,7 @@
         android:id="@+id/productName"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:layout_width="wrap_content"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
         android:layout_toRightOf="@+id/product_name"
         android:gravity="center_vertical"
         android:layout_marginLeft="10dp"
@@ -40,7 +41,7 @@
         android:id="@+id/price"
         android:text="价格:"
         android:layout_width="70dp"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:gravity="center_vertical"
         android:layout_below="@+id/productName"
@@ -50,7 +51,7 @@
         android:id="@+id/priceTextView"
         android:layout_below="@+id/product_name"
         android:layout_width="wrap_content"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
         android:layout_marginLeft="10dp"
         android:gravity="center_vertical"
         android:layout_toRightOf="@+id/price"
@@ -58,16 +59,19 @@
         />
 
 
-    <Button
-        android:id="@+id/purchaseButton"
-        android:layout_marginTop="@dimen/activity_horizontal_margin"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"
+    <com.example.administrator.clownfish.view.ShoppingView
+        android:layout_toRightOf="@+id/productInformationCircleImageView"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/price"
         android:layout_marginBottom="15dp"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:layout_alignParentRight="true"
-        android:text="购买"/>
+        android:id="@+id/purchaseButton"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        app:sv_bg_color="#7df172"
+        app:sv_duration="500"
+        app:sv_text="购买"
+        app:sv_text_size="15sp" />
 
 
 </RelativeLayout>
