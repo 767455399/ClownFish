@@ -106,7 +106,10 @@
         <activity android:name=".Activity.CityListRecyclerActivity" />
         <activity android:name=".Activity.ShoppingViewActivity" />
         <activity android:name=".Activity.ShineButtonActivity" />
-        <activity android:name=".Activity.DoublePullActivity"></activity>
+        <activity android:name=".Activity.DoublePullActivity" />
+        <activity android:name=".Activity.VerticalScrollingActivity" />
+        <activity android:name=".Activity.LandingFunctionActivity" />
+        <activity android:name=".Activity.ChatInterfaceActivity"></activity>
     </application>
 
 </manifest>

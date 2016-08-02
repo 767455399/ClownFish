@@ -8,19 +8,24 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.administrator.clownfish.Activity.ChatInterfaceActivity;
 import com.example.administrator.clownfish.Activity.ChronometerActivity;
 import com.example.administrator.clownfish.Activity.CityListActivity;
 import com.example.administrator.clownfish.Activity.ContactListActivity;
 import com.example.administrator.clownfish.Activity.ContactsActivity;
 import com.example.administrator.clownfish.Activity.DisplayPictureActivity;
+import com.example.administrator.clownfish.Activity.DoublePullActivity;
 import com.example.administrator.clownfish.Activity.ImageViewActivity;
+import com.example.administrator.clownfish.Activity.LandingFunctionActivity;
 import com.example.administrator.clownfish.Activity.PaySuccessActivity;
 import com.example.administrator.clownfish.Activity.PhotoBrowseActivity;
 import com.example.administrator.clownfish.Activity.ShineButtonActivity;
 import com.example.administrator.clownfish.Activity.ShoppingViewActivity;
 import com.example.administrator.clownfish.Activity.TextActivity;
+import com.example.administrator.clownfish.Activity.VerticalScrollingActivity;
 import com.example.administrator.clownfish.BaseFragment;
 import com.example.administrator.clownfish.R;
 import com.example.administrator.clownfish.view.AllShowedGridView;
@@ -37,14 +42,15 @@ import com.squareup.picasso.Picasso;
  * 修改时间：2016/5/17 16:08
  * 修改备注：
  */
-public class MineFragment extends BaseFragment {
+public class MineFragment extends BaseFragment implements View.OnClickListener {
+    private LinearLayout itemBankCard;
     private ShimmerTextView balanceTextView;
     private Shimmer shimmer;
     private AllShowedGridView convenience_services;
     private AllShowedGridView life_services;
     private ConvenienceServicesAdapter convenienceServicesAdapter;
     private LifeServicesAdapter lifeServicesAdapter;
-    private String convenienceServicesString[] = {"联系人", "支付成功", "计时器", "城市列表", "加入购物车","点赞"};
+    private String convenienceServicesString[] = {"联系人", "支付成功", "计时器", "城市列表", "加入购物车","点赞","电影","旋转图片","登陆接口"};
     private String lifeImageViewPath[] = {"http://images.ali213.net/picfile/pic/2013-01-22/927_p19.jpg",
             "http://img.taopic.com/uploads/allimg/121118/240505-12111Q9533274.jpg",
             "http://www.sucaitianxia.com/Photo/pic/200910/nbzbs32.jpg",
@@ -73,6 +79,8 @@ public class MineFragment extends BaseFragment {
         convenience_services = (AllShowedGridView) view.findViewById(R.id.convenience_services);
         life_services = (AllShowedGridView) view.findViewById(R.id.life_services);
         balanceTextView=(ShimmerTextView)view.findViewById(R.id.balanceTextView);
+        itemBankCard=(LinearLayout)view.findViewById(R.id.itemBankCard);
+        itemBankCard.setOnClickListener(this);
         setServiceAdapter();
         setLifeServiceAdapter();
         start();
@@ -167,9 +175,35 @@ public class MineFragment extends BaseFragment {
                     intent.setClass(getActivity(), ShineButtonActivity.class);
                     startActivity(intent);
                 }
+                if("电影".equals(convenienceServicesString[position])){
+                    Intent intent=new Intent();
+                    intent.setClass(getActivity(), DoublePullActivity.class);
+                    startActivity(intent);
+                }
+                if("旋转图片".equals(convenienceServicesString[position])){
+                    Intent intent=new Intent();
+                    intent.setClass(getActivity(), VerticalScrollingActivity.class);
+                    startActivity(intent);
+                }
+                if("登陆接口".equals(convenienceServicesString[position])){
+                    Intent intent=new Intent();
+                    intent.setClass(getActivity(), LandingFunctionActivity.class);
+                    startActivity(intent);
+                }
 
             }
         });
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.itemBankCard:
+                Intent intent=new Intent();
+                intent.setClass(getActivity(), ChatInterfaceActivity.class);
+                startActivity(intent);
+                break;
+        }
     }
 
 

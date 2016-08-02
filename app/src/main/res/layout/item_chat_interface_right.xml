@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/timeTextView"
+        android:text="2016 08 01 14:44"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:orientation="horizontal">
+
+        <com.example.administrator.clownfish.view.CircleImageView
+            android:id="@+id/iconImageView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/dir1"/>
+
+
+        <TextView
+            android:background="@drawable/item_chat_bg"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/chatInterfaceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="123456"/>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

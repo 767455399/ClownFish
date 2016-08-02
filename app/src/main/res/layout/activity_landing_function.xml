@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context="com.example.administrator.clownfish.Activity.LandingFunctionActivity">
+    
+    
+    <com.example.administrator.clownfish.view.StereoView
+        android:id="@+id/stereoView"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:focusableInTouchMode="true"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            >
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@mipmap/icon_password"/>
+
+            <com.example.administrator.clownfish.view.CustomEdittext
+                android:id="@+id/et_password"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColorHint="@color/font_gray"
+                />
+            
+            <com.example.administrator.clownfish.view.RippleView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/rv_password"
+                android:paddingLeft="10dp"
+                app:normal="@drawable/icon_next_gray"
+                app:pressed="@drawable/icon_next"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:focusableInTouchMode="true"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            >
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@drawable/icon_email"/>
+
+            <com.example.administrator.clownfish.view.CustomEdittext
+                android:id="@+id/et_email"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:hint="email"
+                android:inputType="textPassword"
+                android:textColorHint="@color/font_gray"
+                />
+
+            <com.example.administrator.clownfish.view.RippleView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/rv_email"
+                android:paddingLeft="10dp"
+                app:normal="@drawable/icon_next_gray"
+                app:pressed="@drawable/icon_next"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:focusableInTouchMode="true"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            >
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@drawable/icon_user"/>
+
+            <com.example.administrator.clownfish.view.CustomEdittext
+                android:id="@+id/et_username"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:hint="UserName"
+                android:textColorHint="@color/font_gray"
+                />
+
+            <com.example.administrator.clownfish.view.RippleView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/rv_username"
+                android:paddingLeft="10dp"
+                app:normal="@drawable/icon_next_gray"
+                app:pressed="@drawable/icon_next"
+                />
+        </LinearLayout>
+
+
+
+
+
+
+    </com.example.administrator.clownfish.view.StereoView>
+
+</LinearLayout>

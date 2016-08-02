@@ -20,12 +20,23 @@ import com.example.administrator.clownfish.R;
  */
 public class LoadingDialog extends Dialog{
 
-    public LoadingDialog(Context context) {
+   /* public LoadingDialog(Context context) {
         super(context, R.style.LoadingDialogStyle);
         View view= LayoutInflater.from(getContext()).inflate(R.layout.loading_dialog,null);
         ImageView imageView=(ImageView)view.findViewById(R.id.logo);
         AnimationDrawable animationDrawable=(AnimationDrawable)imageView.getBackground();
         animationDrawable.start();
+        setCancelable(false);
+        setCanceledOnTouchOutside(false);
+        setContentView(view);
+    }*/
+
+    public LoadingDialog(Context context) {
+        super(context, R.style.LoadingDialogStyle);
+        View view= LayoutInflater.from(getContext()).inflate(R.layout.sunloading,null);
+       /* ImageView imageView=(ImageView)view.findViewById(R.id.logo);
+        AnimationDrawable animationDrawable=(AnimationDrawable)imageView.getBackground();
+        animationDrawable.start();*/
         setCancelable(false);
         setCanceledOnTouchOutside(false);
         setContentView(view);

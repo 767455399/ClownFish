@@ -59,4 +59,7 @@
     <color name="tab_text_checked">#FF444444</color>
     <color name="tab_text_default">#99444444</color>
     <color name="sv_blue">#688fdb</color>
+    <color name="font_gray">#A6AFC6</color>
+    <color name="bg_white">#FFFFFF</color>
+    <color name="bg_gray">#C5C9CC</color>
 </resources>
